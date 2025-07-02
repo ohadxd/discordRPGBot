@@ -1,11 +1,5 @@
-import mongoose from 'mongoose';
+import mongoose, {Mongoose} from 'mongoose';
 
-const itemSchema = new mongoose.Schema({
-    name: String,
-    type: String, // 'weapon', 'armor', 'accessory', 'potion'
-    bonuses: { type: Map, of: Number },
-    quantity: { type: Number, default: 1 }
-}, { _id: false });
 
 const equipmentSchema = new mongoose.Schema({
     name: String,
@@ -46,8 +40,17 @@ const userRPGSchema = new mongoose.Schema({
 
 
     inventory: { type: [mongoose.Schema.Types.ObjectId],ref: 'Item', default: [] },
-    messagesSent: { type: Number, default: 0 },
-    lastMessage: { type: Date }
+    questList: [{
+        quest: {type: mongoose.Schema.Types.ObjectId, ref: 'Quest'},
+        status: {
+            type: String,
+            enum: ['available', 'in_progress', 'completed', 'failed'],
+            default: 'in_progress'},
+        acceptedAt: { type: Date, default: Date.now },
+        progress: mongoose.Schema.Types.Mixed
+        },
+        ],
+    location: { type: mongoose.Schema.Types.ObjectId, ref: "Location"}
 });
 
 userRPGSchema.index({ userId: 1, guildId: 1 }, { unique: true });
