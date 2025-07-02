@@ -8,8 +8,8 @@ import {
     Interaction,
     ButtonInteraction
 } from 'discord.js';
-import UserRPG from '../models/UserModel';
-import { ItemType } from '../models/item'; // אם קיים
+import UserRPG from '../../models/UserModel';
+import { ItemType } from '../../models/item'; // אם קיים
 
 type EquipmentSlot = 'weapon' | 'armor' | 'accessory';
 

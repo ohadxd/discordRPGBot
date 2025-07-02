@@ -1,6 +1,6 @@
 import { Message, EmbedBuilder } from 'discord.js';
-import UserRPG from '../models/UserModel.js';
-import { getEffectiveStats } from '../game/charlogic.js';
+import UserRPG from '../../models/UserModel';
+import { getEffectiveStats } from '../../game/charlogic';
 
 
 type BaseStats = {

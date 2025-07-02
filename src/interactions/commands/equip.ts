@@ -1,5 +1,5 @@
 import { Message } from 'discord.js';
-import { equipItem } from '../game/charlogic.js';
+import { equipItem } from '../../game/charlogic';
 
 export async function handleEquipCommand(message: Message, args: string[]) {
     if (!message.guild || !message.member) return;

@@ -1,5 +1,5 @@
 import {EmbedBuilder, Message} from 'discord.js';
-import UserRPG from '../models/UserModel.js';
+import UserRPG from '../../models/UserModel';
 
 export async function handleJoinCommand(message: Message) {
     const userId = message.author.id;

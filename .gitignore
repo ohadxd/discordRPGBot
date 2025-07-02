@@ -1,0 +1,32 @@
+# קבצי סביבה
+.env
+.env.*
+
+# תיקיות מערכת של IDE
+.idea/
+*.iml
+
+# תיקיות Node
+node_modules/
+
+# קבצי לוג
+logs/
+*.log
+
+# Build artifacts
+dist/
+build/
+
+# TypeScript output
+*.tsbuildinfo
+
+# קבצי מערכת הפעלה
+.DS_Store
+Thumbs.db
+
+# קבצים זמניים של VSCode
+.vscode/
+
+# קבצי בדיקה או קבצים זמניים
+*.tmp
+*.temp

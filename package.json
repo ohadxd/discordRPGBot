@@ -1,0 +1,28 @@
+{
+  "name": "japanimebot",
+  "version": "1.0.0",
+  "description": "A bot with role play game to make the chat more interactive ",
+  "main": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "author": "Ohad",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "linkify-it": "^5.0.0",
+    "mongoose": "^8.15.2",
+    "nodemon": "^3.1.10",
+    "tldts": "^7.0.8"
+  },
+  "devDependencies": {
+    "@types/linkify-it": "^5.0.0",
+    "@types/node": "^24.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@8.15.4+sha512.0bd3a9be9eb0e9a692676deec00a303ba218ba279d99241475616b398dbaeedd11146f92c2843458f557b1d127e09d4c171e105bdcd6b61002b39685a8016b9e"
+}
